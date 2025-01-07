@@ -12,7 +12,7 @@ Both implementations aim to detect and monitor objects (vehicles, pedestrians, e
 
 ## Folders Description
 
-### 1. Simple-Moving-Object-Recognition
+### 1. Simple-Moving-Object-Recognition (Basic folder)
 This folder contains the implementation of object detection using traditional image processing techniques like:
 - Background subtraction using MOG2 (Mixture of Gaussians version 2)
 - Contour detection
@@ -20,8 +20,8 @@ This folder contains the implementation of object detection using traditional im
 
 These techniques do not use machine learning algorithms but rely on classical computer vision methods.
 
-### 2. YOLO-Object-Detection
-This folder implements object detection using the **YOLO (You Only Look Once)** algorithm, a state-of-the-art real-time object detection system. This method leverages pre-trained YOLO models from the `yolo` module in Python to detect multiple classes of objects in traffic scenes.
+### 2. YOLO-Object-Detection (usingYolo)
+This folder implements object detection using the **YOLO (You Only Look Once)** algorithm, a state-of-the-art real-time object detection system. This method leverages pre-trained YOLO models from the `yolo` module in Python to detect multiple classes of objects in traffic scenes. Files of main.py/yolo.py are used to detect objects using traffic video file as input. And yoloImage.py can detect objects from a picture.
 
 ---
 
@@ -43,7 +43,7 @@ This folder implements object detection using the **YOLO (You Only Look Once)** 
 
 3. Install the required libraries:
    ```bash
-   pip install numpy pandas
+   pip install numpy pandas opencv pillow
    ```
 
 ---
@@ -66,20 +66,13 @@ This folder implements object detection using the **YOLO (You Only Look Once)** 
    ```bash
    python usingYolo/main.py
    ```
-5. Processed videos will be played automatically.
+5. Processed videos will be saved in the `traffic_density_analysis.avi` file.
 
 ---
 
 ## Results
 - **Simple Moving Object Recognition**: Demonstrates basic moving object detection using traditional computer vision methods (e.g., MOG2 for background subtraction).
 - **YOLO Object Detection**: Provides robust and accurate detection of multiple object classes (e.g., cars, buses, pedestrians) in traffic scenes using pre-trained YOLO models.
-
----
-
-## Future Work
-- Integrate tracking algorithms to monitor object movement.
-- Enhance accuracy by fine-tuning YOLO models with custom datasets.
-- Expand the system to include traffic analytics such as congestion detection and vehicle counting.
 
 ---
 
